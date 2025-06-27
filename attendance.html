@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>تسجيل الحضور</title>
+</head>
+<body>
+    <h2>تسجيل الحضور/الانصراف 🕘</h2>
+    <form method="POST">
+        <select name="employee">
+            {% for emp in employees %}
+            <option>{{ emp }}</option>
+            {% endfor %}
+        </select>
+        <select name="status">
+            <option>حضور ✅</option>
+            <option>انصراف ❌</option>
+        </select>
+        <select name="uniform">
+            <option>يرتدي 🎽</option>
+            <option>لا يرتدي ❌</option>
+        </select>
+        <button type="submit" style="background-color: #E74C3C;">تسجيل 📝</button>
+    </form>
+</body>
+</html>

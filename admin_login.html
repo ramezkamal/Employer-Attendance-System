@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>دخول الأدمن</title>
+</head>
+<body>
+    <h2>تسجيل دخول الأدمن 🔒</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit" style="background-color: #3498DB;">دخول ✨</button>
+    </form>
+</body>
+</html>

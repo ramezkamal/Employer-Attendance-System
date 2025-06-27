@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>لوحة التحكم</title>
+</head>
+<body>
+    <h2>إدارة الموظفين 🆕</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="اسم الموظف" required>
+        <select name="uniform">
+            <option>نعم ✅</option>
+            <option>لا ❌</option>
+        </select>
+        <input type="text" name="phone" placeholder="رقم الهاتف" required>
+        <button type="submit" style="background-color: #2ECC71;">إضافة موظف 💾</button>
+    </form>
+    
+    <h3>الموظفون المسجلون:</h3>
+    <table border="1">
+        <tr>
+            <th>الاسم</th>
+            <th>يونيفورم</th>
+            <th>رقم الهاتف</th>
+            <th>تاريخ الإضافة</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp['الاسم'] }}</td>
+            <td>{{ emp['يونيفورم'] }}</td>
+            <td>{{ emp['رقم الهاتف'] }}</td>
+            <td>{{ emp['تاريخ الإضافة'] }}</td>
+        </tr>
+        {% endfor %}
+</table>
